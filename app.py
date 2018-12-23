@@ -13,7 +13,9 @@ def searchbookinggref():
 
 	look = input("Please enter a file name: ")
 
-	col4 = [x[2] for x in data]
+	look = look.lower()
+
+	col4 = [x[3] for x in data]
 	print(col4)
 	if look in col4:
 	# searches through column 4 to find all instances of the films name
@@ -26,6 +28,30 @@ def searchbookinggref():
 				# results.append(k)
 	else:
 		print("No film with that name")
+
+# function  searches ID number from database
+def searchref():
+	data = []
+	with open("cinama.csv") as csvfile:
+		reader = csv.reader(csvfile)
+		for row in reader:
+			data.append(row)
+	print (data)
+
+	look = input("Please enter a file name: ")
+	col1 = [x[0] for x in data]
+	print(col1)
+	if look in col1:
+	# searches through column 4 to find all instances of the films name
+	# if it finds a macth the index (row) number of the natch is noted as 'k'
+	#data [k] in range prints all the information in row
+		for k in range (0, len(col1)):
+			if col1[k] == look:
+				# print("test")
+				print(data[k])
+				# results.append(k)
+	else:
+		print("No ID Found in  the system")
 
 
 def addbooking():
@@ -57,7 +83,7 @@ def addbooking():
 		# asks then to enter details
 		surname = input("please enter your surname")
 		forename = input("Please enter your forename")
-		film = input("Please enter the film you want see")
+		film = input("Please enter the film you want see").lower()
 		day = input("What day of the week do you want see the film?")
 		# adds these details to the 2D array called 'bookings'
 		#addpend means add
@@ -77,7 +103,7 @@ def addbooking():
 		# asks then to enter details
 		surname = input("please enter your surname")
 		forename = input("Please enter your forename")
-		film = input("Please enter the film you want see")
+		film = input("Please enter the film you want see").lower()
 		day = input("What day of the week do you want see the film?")
 		# adds these details to the 2D array called 'bookings'
 		#addpend means add
@@ -108,5 +134,7 @@ if choice == "1":
 elif choice == "2":
 	searchbookinggref()
 	# print("test print statement to see if choice 2 works")
+elif choice == "3":
+	searchref()
 else:
 	print("Invalid entry")
