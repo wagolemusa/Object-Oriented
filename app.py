@@ -19,7 +19,7 @@ def searchbookinggref():
 	print(col4)
 	if look in col4:
 	# searches through column 4 to find all instances of the films name
-	# if it finds a macth the index (row) number of the natch is noted as 'k'
+	# if it finds a macth the index (row) number of the match is noted as 'k'
 	#data [k] in range prints all the information in row
 		for k in range (0, len(col4)):
 			if col4[k] == look:
