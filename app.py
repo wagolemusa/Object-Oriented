@@ -90,7 +90,7 @@ def addbooking():
 		bookings.append(bookingref)
 		bookings.append(surname)
 		bookings.append(forename)
-		bookings.append(film)
+ 		bookings.append(film)
 		bookings.append(day)
 		# takes all the informaion in the 2D array 'bookings' and writes it
 		#to the csv file colled 'cinema.csv'
