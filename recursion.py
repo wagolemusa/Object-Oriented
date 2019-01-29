@@ -10,5 +10,5 @@ def factorial(n):
 		return 1
 	return ni * factorial(ni - 1)
 
-n = (4.9)
+n = (4)
 print(factorial(n))
