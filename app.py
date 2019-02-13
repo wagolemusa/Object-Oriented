@@ -3,6 +3,7 @@ from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 
 app = Flask(__name__)
+
 app.config.from_pyfile('config.cfg')
 
 mail = Mail(app)
@@ -14,7 +15,14 @@ def index():
 		return '<form action="/" method ="POST"><input name="email"><input type="submit"></form>'
 
 	email = request.form['email']
-	token = s.dumps(email, salt='email-confirm')
+	token = s.dumps(email, salt='email_confirm')
+
+	msg = Message('Conform_Email', sender='homiemusa@gmail.com', recipients=[email])
+	link = url_for('confirm_email', token=token, _external=True)
+
+	msg.body = 'Your link is {}'.format(link)
+
+	mail.send(msg)
 
 	return '<h1>The email you entered is {}. The token {}<h1>'.format(email, token)
 
