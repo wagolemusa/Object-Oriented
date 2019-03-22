@@ -1,7 +1,5 @@
 
 # Stack Data Structure
-
-
 class Stack():
 	def __init__(self):
 		self.items = []
@@ -27,7 +25,6 @@ class Stack():
 	# This function return the stack in the items list
 	def get_stack(self):
 		return self.items
-
 
 s = Stack()
 s.push('A') #added 'A' to list
