@@ -47,5 +47,4 @@ def is_param_balanced(paren_string):
 	else:
 		return False
 
-
 print(is_param_balanced("[]"))

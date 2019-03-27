@@ -26,7 +26,7 @@ def dev_by_2(dec_num):
 	bin_num = ""
 	# we check is the stack in empty
 	while not s.is_empty():
-		# it pops to the bin_num
+		# it pops to the bin_num3
 		bin_num += str(s.pop())
 
 	return bin_num
