@@ -51,5 +51,5 @@ Llist.append("D")
 # Llist.prepend("E")
 # It insert into after B
 Llist.insert_after_node(Llist.head.next, "E")
+Llist.insert_after_node(Llist.head.next, "P")
 Llist.print_list()
-
