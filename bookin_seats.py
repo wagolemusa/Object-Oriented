@@ -29,16 +29,16 @@ def printSales( SalesA, SalesB, SalesC, totalSales ):
 
 
 def main():
-	classATicketsBought = int( input("How many tuckets were bought "+\
+	ticketA = int( input("How many tuckets were bought "+\
 															" for class A ?"))
-	classBTicketsBought = int( input("How many tuckets were bought "+\
+	ticketB = int( input("How many tuckets were bought "+\
 															" for class B ?"))
-	classCTicketsBought = int( input("How many tuckets were bought "+\
+	ticketC = int( input("How many tuckets were bought "+\
 															" for class C ?"))
 
-	SalesA = calculateClassTickectSales (classATicketsBought )
-	SalesB = calculateClassTickectSales (classBTicketsBought )
-	SalesC = calculateClassTickectSales (classCTicketsBought )
+	SalesA = calculateClassTickectSales (ticketA )
+	SalesB = calculateClassTickectSales (ticketB )
+	SalesC = calculateClassTickectSales (ticketC )
 
 	totalSales =  calculateTotalSale(SalesA, SalesB, SalesC)
 
