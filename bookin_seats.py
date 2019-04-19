@@ -17,17 +17,19 @@ def calculateClassTickectSales( classCTicketsBought ):
 	classCSales = classCTicketsBought * 1000
 	return classCSales
 
+# Function displays the total seats
 def calculateTotalSale( SalesA, SalesB, SalesC):
 	totalSales = SalesA + SalesB + SalesC
 	return totalSales
 
+# Function displays the classes prices and total
 def printSales( SalesA, SalesB, SalesC, totalSales ):
 	print( 	"Class A Seats: KSH" + format(SalesA),\
-					"Class C Seats: KSH" + format(SalesB),\
-					"Class A Seats: KSH" + format(SalesC),\
-					"Total sales:   KSH" + format(totalSales))
+					"Class B Seats: KSH" + format(SalesB),\
+					"Class C Seats: KSH" + format(SalesC),\
+					"Total sales:   KSH" + format(totalSales), sep="\n")
 
-
+# Main runs all the functions
 def main():
 	ticketA = int( input("How many tuckets were bought "+\
 															" for class A ?"))
