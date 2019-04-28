@@ -26,6 +26,25 @@ class Stack():
 	def get_stack(self):
 		return self.items
 
+
+def reverse_string(stack, input_str):
+	"""
+	Loop through the string and push contents
+	Character by character outo stack.--
+	"""
+	for i in range(len(input_str)):
+		stack.push(input_str[i])
+
+	rev_str = ""
+	while not stack.is_empty():
+		rev_str += stack.pop()
+	return rev_str
+
+s = Stack()
+input_str = "HELLO"
+print(reverse_string(s, input_str))
+
+
 s = Stack()
 s.push('A') #added 'A' to list
 s.push('B') #added 'B' to a list
