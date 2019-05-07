@@ -184,6 +184,65 @@ class LinkedList:
 		self.head = _reverse_recursive(cur=self.head, prev=None) 
 
 
+	def merge_sorted(self, Llist):
+		"""
+		This function sorts the  different lists
+		eg p = 1,5,7,9,10
+			q = 2,3,4,6,8
+		To  s = 1,2,3,4,5,6,7,8,9,10
+
+		"""
+		p = self.head
+		q = Llist.head
+		s = None 
+		if not p:
+			return q
+		if not q:
+			return p
+		if p and q:
+			if p.data <= q.data:
+				s = p
+				p = s.next
+			else:
+				s = q
+				q = s.next
+			new_head = s
+
+		while p and q:
+			if p.data <= q.data:
+				s.next = p
+				s = p
+				p = s.next
+			else:
+				s.next = q
+				s = q
+				q = s.next
+		if not p:
+			s.next = q
+		if not q:
+			s.next = p
+		return new_head
+
+Llist_1 = LinkedList()
+Llist_2 = LinkedList()
+
+Llist_1.append(1)
+Llist_1.append(5)
+Llist_1.append(7)
+Llist_1.append(9)
+Llist_1.append(10)
+
+Llist_2.append(2)
+Llist_2.append(3)
+Llist_2.append(4)
+Llist_2.append(6)
+Llist_2.append(8)
+
+Llist_1.merge_sorted(Llist_2)
+Llist_1.print_list()
+# print("\n")
+# Llist_2.print_list()
+
 Llist = LinkedList()
 Llist.append("A")
 Llist.append("B")
