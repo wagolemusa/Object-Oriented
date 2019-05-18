@@ -223,23 +223,55 @@ class LinkedList:
 			s.next = p
 		return new_head
 
-Llist_1 = LinkedList()
-Llist_2 = LinkedList()
+	def remove_duplication(self):
+		"""
+		Origin List
+		1 -> 6 -> 1 -> 4 -> 2 -> 2 ->4
+		Remove duplicates
+		1 -> 6 -> 4 -> 2
+		"""
+		cur = self.head
+		prev = None
+		dup_values = dict()
+		while cur:
+			if cur.data in dup_values:
+				#Reveme
+				prev.next = cur.next
+				cur = None 
+			else:
+				# Have not encountered element before
+				dup_values[cur.data] = 1
+				prev = cur
+			cur = prev.next
 
-Llist_1.append(1)
-Llist_1.append(5)
-Llist_1.append(7)
-Llist_1.append(9)
-Llist_1.append(10)
+# Llist_1 = LinkedList()
+# Llist_2 = LinkedList()
 
-Llist_2.append(2)
-Llist_2.append(3)
-Llist_2.append(4)
-Llist_2.append(6)
-Llist_2.append(8)
+# Llist_1.append(1)
+# Llist_1.append(5)
+# Llist_1.append(7)
+# Llist_1.append(9)
+# Llist_1.append(10)
 
-Llist_1.merge_sorted(Llist_2)
-Llist_1.print_list()
+# Llist_2.append(2)
+# Llist_2.append(3)
+# Llist_2.append(4)
+# Llist_2.append(6)
+# Llist_2.append(8)
+
+Llist = LinkedList()
+Llist.append(1)
+Llist.append(6)
+Llist.append(1)
+Llist.append(4)
+Llist.append(2)
+Llist.append(4)
+Llist.remove_duplication()
+Llist.print_list()
+
+
+# Llist_1.merge_sorted(Llist_2)
+# Llist_1.print_list()
 # print("\n")
 # Llist_2.print_list()
 
