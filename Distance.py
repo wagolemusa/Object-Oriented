@@ -4,7 +4,7 @@ the distance of a vehicle can be calculated as followers:
 - distance = speed = time
 For example if a train travel 40 miles per hour for three hours,
 the distance traveled is 120 miles.
-- write a program that ask the user for the spendof vehicle( in miles per hour)
+- write a program that ask the user for the spend of vehicle( in miles per hour)
 and the number of hours it has traveled.
 It should then use a loop to display
 the distance the vehicle has traveled for each hour of that time period
@@ -17,7 +17,6 @@ hours    Distance Traveled
 2         80
 3					120
 """
-
 vehicleSpeed = float(input("What is spend vechicle:"))
 timeTraveled = int(input("How many hours has it traveled"))
 
