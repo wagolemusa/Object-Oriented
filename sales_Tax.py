@@ -25,4 +25,5 @@ print ("Amount of purchase $ "+ format( AmountSalesUser, ",.2f"), \
 				"Sales Tax $"+ format(stateTax, ",.2f"), \
 				"County Tax $" + format(countyTax, ",.2f"), \
 				"Total Tax $" + format(totalTax, ",.2f"),\
-				"Total Sales $" + format(totalSales, ",.2f"), sep = "\n")
+				"Total Sales $" + format(totalSales, ",.2f"))
+# , sep = "\n"
