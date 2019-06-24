@@ -4,7 +4,8 @@ the distance of a vehicle can be calculated as followers:
 - distance = speed = time
 For example if a train travel 40 miles per hour for three hours,
 the distance traveled is 120 miles.
-- write a program that ask the user for the spend of vehicle( in miles per hour)
+- write a program that ask the user for the spend of vehicle
+( in miles per hour)
 and the number of hours it has traveled.
 It should then use a loop to display
 the distance the vehicle has traveled for each hour of that time period
